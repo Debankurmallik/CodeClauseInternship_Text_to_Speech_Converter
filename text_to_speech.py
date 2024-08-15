@@ -24,6 +24,12 @@ def speak():
     engine.say(text)
     engine.runAndWait()
 
+def save_audio_pyttsx3(text, filename):
+    engine = pyttsx3.init()
+    engine.save_to_file(text, filename)
+    engine.runAndWait()
+save_audio_pyttsx3("This audio will be saved as an output file.", "output_audio.mp3")
+
 
 project = tk.Tk()
 project.title("Text to Speech Converter")
